@@ -34,7 +34,7 @@
         <tr>
             <td style="text-align:center; border-width: 0px;">
                 <a href="https://github.com/umass-sustainablecomputinglab/cloudIndex/blob/master/monitor.md" 
-                    style="color:#808080; font-size:110%">Monitor indices</a></td>
+                    style="color:#808080; font-size:110%">monitor indices</a></td>
             <td style="text-align:center; border-width: 0px;">
                 <a href="https://github.com/umass-sustainablecomputinglab/cloudIndex/tree/master/code" 
                     style="color:#808080; font-size:110%">explore code</a></td>
@@ -48,13 +48,15 @@
       <div id="content">
 
 <h1>Cloud Index</h1>
-<p>Interested in deploying applications on spot servers (like <a href="https://aws.amazon.com/ec2/spot/" style="color: #8B0000">Amazon spot instances</a>) but detered by the uncertainty of variable pricing? Inspired by the economic and financial market indices, we design a mechanism to reliably estimate the cost efficiency of flexible applications on EC2 spot markets. Read on!
+<p>Interested in deploying applications on spot servers (like <a href="https://aws.amazon.com/ec2/spot/" style="color: #8B0000">Amazon spot instances</a>) but detered by the uncertainty of variable pricing? Inspired by the economic and financial market indices, we design a mechanism to reliably estimate the cost efficiency of flexible applications on EC2 spot markets.
 
-<h3>Motivation</h3>
-<p>TBA</p>
+<h3>Why an Index?</h3>
+<p>In contrast to the current practice of predicting spot market behavior solely based on the historical price traces, we take first principles approach to observing the infrastructure-level realities in public cloud datacenters. Based on these observations, we infer that spot markets are reliably predictable at aggregate levels than at individual level. Then, towards collectively modeling a group of spot markets, we introduce a market index for the cloud.</p>
+
+<p>The resulting cloud index not only provides reliable cost estimates but also reflects the fair market value of the idle cloud capacity. Our insights from applying the index to the global spot markets are shared <a href="https://github.com/umass-sustainablecomputinglab/cloudIndex/blob/master/monitor.md" style="color: #8B0000">here</a>.</p>
 
 <h3> Index-tracking by Server Hopping</h3>
-<p>TBA</p>
+<p>Our system design goal is simple: run a given application on variable-price spot servers such that it incurs a predictable expense. In doing so, we observe that investors face similar issues in financial markets when making investment decisions. While broad market indices like S&amp;P 500 and Dow Jones Industrial Average provide a high-level benchmark, investors employ active trading to adjust their portfolio so that it continues to meet their investment targets despite the volatility of financial markets. Enabled by recent advances in container virtualization, datacenter networking and per-second billing models, we design an index-tracking mechanism that utilizes server hopping technique. We describe in more detail the properties of index-tracking, policies for cost-availability tradeoff, and our system evaluations in the papers below.</p>
 
 <h3>Publications</h3>
     IndeX Marks the Spot: Cost-Predictive Server Hosting in Spot Markets <br>
