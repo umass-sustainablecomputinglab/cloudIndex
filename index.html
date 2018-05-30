@@ -17,12 +17,13 @@
     <div id="wrap">
       <div id="sidebar">
       <div style="width: 100%; background:white; margin:0; text-align: center; padding-bottom: 10px;">
-        <img src="images/cloudIndex.png" width="100%" height="100%" style="border: none; margin-bottom:10px">
+        <a href="index.html">
+        <img src="images/cloudIndex.png" width="100%" height="100%" style="border: none; margin-bottom:10px"></a>
         <h3>Get Started</h3>
         <table style="border: 0px" width="100%">
         <tr>
             <td width="33%" style="text-align:center; border-width: 0px;">
-                <a href="https://github.com/umass-sustainablecomputinglab/cloudIndex/blob/master/monitor.md">
+                <a href="monitor.html">
                 <img src="images/graph.png" width="120%" height="10%"></a></td>
             <td width="33%" style="text-align:center; border-width: 0px;">
                 <a href="https://github.com/umass-sustainablecomputinglab/cloudIndex/tree/master/code">
@@ -33,7 +34,7 @@
         </tr>
         <tr>
             <td style="text-align:center; border-width: 0px;">
-                <a href="https://github.com/umass-sustainablecomputinglab/cloudIndex/blob/master/monitor.md" 
+                <a href="monitor.html" 
                     style="color:#808080; font-size:110%">monitor indices</a></td>
             <td style="text-align:center; border-width: 0px;">
                 <a href="https://github.com/umass-sustainablecomputinglab/cloudIndex/tree/master/code" 
@@ -53,7 +54,7 @@
 <h3>Why an Index?</h3>
 <p>In contrast to the current practice of predicting spot market behavior solely based on the historical price traces, we take first principles approach to observing the infrastructure-level realities in public cloud datacenters. Based on these observations, we infer that spot markets are reliably predictable at aggregate levels than at individual level. Then, towards collectively modeling a group of spot markets, we introduce a market index for the cloud.</p>
 
-<p>The resulting cloud index not only provides reliable cost estimates but also reflects the fair market value of the idle cloud capacity. Our insights from applying the index to the global spot markets are shared <a href="https://github.com/umass-sustainablecomputinglab/cloudIndex/blob/master/monitor.md" style="color: #8B0000">here</a>.</p>
+<p>The resulting cloud index not only provides reliable cost estimates but also reflects the fair market value of the idle cloud capacity. Our insights from applying the index to the global spot markets are shared <a href="monitor.html" style="color: #8B0000">here</a>.</p>
 
 <h3> Index-tracking by Server Hopping</h3>
 <p>Our system design goal is simple: run a given application on variable-price spot servers such that it incurs a predictable expense. In doing so, we observe that investors face similar issues in financial markets when making investment decisions. While broad market indices like S&amp;P 500 and Dow Jones Industrial Average provide a high-level benchmark, investors employ active trading to adjust their portfolio so that it continues to meet their investment targets despite the volatility of financial markets. Enabled by recent advances in container virtualization, datacenter networking and per-second billing models, we design an index-tracking mechanism that utilizes server hopping technique. We describe in more detail the properties of index-tracking, policies for cost-availability tradeoff, and our system evaluations in the papers below.</p>
